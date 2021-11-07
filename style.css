@@ -28,6 +28,7 @@
 .navbar .logo {
     align-self: center;
     font-family: var(--oswald);
+    cursor: pointer;
 }
 
 .search {
@@ -54,10 +55,23 @@
     cursor: pointer;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
+    transition: 0.2s ease-in-out;
+}
+
+.search>i:hover {
+    background-color: #2a3b57;
 }
 
 main {
     height: 52.7em;
+}
+
+main .card {
+    position: absolute;
+    background: red;
+    width: 50em;
+    height: 40em;
+    left: 35em;
 }
 
 footer {
