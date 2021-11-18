@@ -26,20 +26,20 @@ function getCard() {
                     <p>"${data.bio}"</p>
                 </div>
                 <div class="card-content">
-                        <h3>Nick-Name:</h3>
-                        <p>${data.login}</p>
-                        <h3>Repositories</h3>
+                        <h3>Latest Repositories</h3>
+                        <ul class="repo-list"></ul>
                 </div>
                 <div class="content-lower">
                     <div class="followers">
                         <p>${data.followers} Followers <i class="fas fa-users"></i></p>
                     </div>
+                    <div>${data.login}</div>
                     <div class="following">
                         <p>${data.following} Following <i class="fas fa-user"></i></p>
                     </div>
                 </div>
             </div>`
-                card.innerHTML = html
+
                 getRepo(`${userName}`, html)
             } else {
                 alert("Invalid User")
@@ -53,10 +53,10 @@ function getRepo(userName, html) {
     fetch(`https://api.github.com/users/${userName}/repos`)
         .then(response => response.json())
         .then(data => {
-            for (var i = 0; i < 4; i++) {
-                console.log(i)
 
+            for (var i = 1; i < 5; i++) {
+                html
             }
-            console.log(html)
+            card.innerHTML = html
         })
 }
