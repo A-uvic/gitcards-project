@@ -27,7 +27,8 @@ function getCard() {
                 </div>
                 <div class="card-content">
                         <h3>Latest Repositories</h3>
-                        <ul class="repo-list"></ul>
+                    <div className="repos">
+                    </div>
                 </div>
                 <div class="content-lower">
                     <div class="followers">
@@ -55,7 +56,7 @@ function getRepo(userName, html) {
         .then(data => {
 
             for (var i = 1; i < 5; i++) {
-                html
+                html += `<li>${data[i].name}</li>`
             }
             card.innerHTML = html
         })

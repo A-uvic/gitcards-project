@@ -125,8 +125,9 @@
     margin-top: .5em;
 }
 
-.repo-list {
+.repos {
     list-style: none;
+    background-color: red;
 }
 
 .content-lower {
