@@ -94,10 +94,18 @@
     border-radius: 50em;
     margin-top: -5em;
     background-color: var(--white);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.card-img>img:hover {
+    width: 200px;
+    height: 200px;
 }
 
 .card-location {
-    color: var(--grey)
+    color: var(--grey);
+    padding-bottom: 1em;
 }
 
 .card-title {
@@ -122,12 +130,21 @@
 }
 
 .card-content>h3 {
-    margin-top: .5em;
+    margin-top: 3em;
 }
 
 .repos {
-    list-style: none;
-    background-color: red;
+    margin-top: 1em;
+}
+
+.repos>a {
+    text-decoration: none;
+    color: var(--black);
+    transition: .2s linear;
+}
+
+.repos>a:hover {
+    color: var(--grey)
 }
 
 .content-lower {
