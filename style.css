@@ -111,6 +111,12 @@
 .card-title {
     font-size: 3em;
     color: var(--secondary);
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.card-title:hover {
+    color: var(--primary);
 }
 
 .bio {

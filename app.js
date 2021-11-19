@@ -1,10 +1,15 @@
 // Variables
 const searchBtn = document.getElementById("search-btn")
 const card = document.getElementById("card-container")
+let inputText = document.getElementById("user-name")
 
 // Event Listeners
 searchBtn.addEventListener("click", getCard)
-searchBtn.addEventListener("keyup", getCard)
+inputText.addEventListener("keyup", e => {
+    if (e.keyCode === 13) {
+        getCard()
+    }
+})
 
 //Functions
 function getCard() {
@@ -19,9 +24,9 @@ function getCard() {
                 let html = `<div class="card">
                 <div class="card-top">
                 </div>
-                <div class="card-img">
+                    <a href="${data.avatar_url}"class="card-img">
                     <img src="${data.avatar_url} alt="User image" width="180px" height="180px">
-                </div>
+                    </a>
                 <h4 class="card-location"><i class="fas fa-map-marker-alt"></i> ${data.location}</h4>
                 <a href="${data.blog}"class="card-title">${data.name}</a>
                 <div class="bio">
@@ -41,7 +46,7 @@ function getCard() {
 
         });
 
-
+    inputText.value = ""
 }
 
 function getRepo(userName, html, following, followers) {
