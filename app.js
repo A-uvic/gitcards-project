@@ -25,7 +25,7 @@ function getCard() {
                 let html = `<div class="card">
                 <div class="card-top">
                 </div>
-                    <a href="${data.avatar_url}"class="card-img">
+                    <a href="${data.html_url}"class="card-img">
                     <img src="${data.avatar_url} alt="User image" width="180px" height="180px">
                     </a>
                 <h4 class="card-location"><i class="fas fa-map-marker-alt"></i> ${data.location}</h4>
