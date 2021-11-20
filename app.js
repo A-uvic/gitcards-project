@@ -41,7 +41,7 @@ function getCard() {
 
                 card.innerHTML = html
             } else {
-                alert("Invalid User")
+                invalidUser()
             }
 
 
@@ -71,5 +71,9 @@ function getRepo(userName, html, following, followers) {
             card.innerHTML = html
 
         })
+
+}
+
+function invalidUser() {
 
 }
