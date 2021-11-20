@@ -7,6 +7,7 @@ let inputText = document.getElementById("user-name")
 searchBtn.addEventListener("click", getCard)
 inputText.addEventListener("keyup", e => {
     if (e.keyCode === 13) {
+        e.preventDefault();
         getCard()
     }
 })

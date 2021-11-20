@@ -1,0 +1,47 @@
+@media (max-width: 664px) {
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width:550px) {
+    .navbar {
+        display: inline-block;
+        text-align: center;
+        height: 8em;
+        width: 100%;
+    }
+}
+
+@media (max-width:436px) {
+    .search>input {
+        width: 12em;
+    }
+}
+
+@media (max-width:310px) {
+    .content-lower {
+        display: block;
+    }
+    .card {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media(max-width:256px) {
+    .search>input {
+        width: 8em;
+    }
+}
+
+@media (max-width:230px) {
+    .card-img>img {
+        height: 120px;
+        width: 120px;
+    }
+    .card-img>img:hover {
+        height: 140px;
+        width: 140px;
+    }
+}
