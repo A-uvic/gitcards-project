@@ -74,6 +74,6 @@ function getRepo(userName, html, following, followers) {
 
 }
 
-function invalidUser() {
+// function invalidUser() {
 
-}
+// }
