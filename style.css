@@ -37,7 +37,7 @@
 }
 
 .search>input {
-    border: none;
+    
     background-color: var(--white);
     color: var(--black);
     font-weight: bold;
@@ -46,6 +46,8 @@
     outline: 0;
     letter-spacing: 0.5px;
 }
+
+
 
 .search>button {
     background-color: var(--secondary);
@@ -64,7 +66,7 @@
 }
 
 .card {
-    margin: 5em auto;
+    margin: auto;
     width: 35em;
     height: 45em;
     text-align: center;
@@ -165,3 +167,30 @@
 
 
 /* Javascript related */
+
+.invalid-user{
+    border: solid 2px red;
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both; 
+    }
+
+.invalid-user::placeholder{
+    color: red;
+}
+    
+    @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+      
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+      
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }

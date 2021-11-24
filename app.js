@@ -4,6 +4,10 @@ const card = document.getElementById("card-container")
 let inputText = document.getElementById("user-name")
 
 // Event Listeners
+inputText.addEventListener("focus", () => {
+    inputText.classList.remove("invalid-user")
+    inputText.placeholder = ""
+})
 searchBtn.addEventListener("click", getCard)
 inputText.addEventListener("keyup", e => {
     if (e.keyCode === 13) {
@@ -12,7 +16,7 @@ inputText.addEventListener("keyup", e => {
     }
 })
 
-//Functions
+//Function to get card informations from API
 function getCard() {
     let userName = document.getElementById("user-name").value.trim()
     const urlCard = fetch(`https://api.github.com/users/${userName}`)
@@ -49,7 +53,7 @@ function getCard() {
 
     inputText.value = ""
 }
-
+// Function to get the user repository from API
 function getRepo(userName, html, following, followers) {
     fetch(`https://api.github.com/users/${userName}/repos`)
         .then(response => response.json())
@@ -73,7 +77,10 @@ function getRepo(userName, html, following, followers) {
         })
 
 }
+//Function used when user is invalid
+function invalidUser() {
+    inputText.classList.add("invalid-user")
+    inputText.placeholder = "Invalid user..."
 
-// function invalidUser() {
 
-// }
+}
