@@ -12,4 +12,4 @@ Muito simples, basta acessar o link gerado pelo github pages e buscar por um usu
 
 
 
-#### Você pode acessar a demonstração: [Aqui](https://tranvic.github.io/gitcards-project/)
+#### Você pode acessar a demonstração: [Aqui](https://tranivic.github.io/gitcards-project/)
